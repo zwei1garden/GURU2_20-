@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editTextUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="아이디 (6~15자 영문/숫자)"
+            android:textColorHint="#FFFFFF"
+            android:textColor="@color/orange"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호 (8~15자 영문/숫자)"
+            android:textColorHint="#FFFFFF"
+            android:textColor="@color/orange"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/editTextNickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="닉네임"
+            android:textColorHint="#FFFFFF"
+            android:textColor="@color/orange"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="학과 선택"
+            android:textColor="@color/orange"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <CheckBox
+            android:id="@+id/checkboxSoftware"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="소프트웨어융합학과"
+            android:textColor="#FFFFFF"/>
+
+        <CheckBox
+            android:id="@+id/checkboxDigitalMedia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="디지털미디어학과"
+            android:textColor="#FFFFFF"/>
+
+        <CheckBox
+            android:id="@+id/checkboxInformationSecurity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="정보보호학과"
+            android:textColor="#FFFFFF"/>
+
+        <CheckBox
+            android:id="@+id/checkboxDataScience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="데이터사이언스학과"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="회원가입"
+            app:icon="@android:drawable/divider_horizontal_bright"
+            app:iconTint="#00000000"
+            app:rippleColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/textViewBackToLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="로그인 화면으로 돌아가기"
+            android:textColor="@color/orange"
+            android:clickable="true"
+            android:focusable="true"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</ScrollView>
