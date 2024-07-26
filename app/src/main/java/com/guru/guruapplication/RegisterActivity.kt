@@ -59,9 +59,12 @@ class RegisterActivity : AppCompatActivity() {
                 val major = selectedMajors.joinToString(", ")
                 val success = dbHelper.addUser(username, password, nickname, major)
                 if (success) {
-                    Toast.makeText(this, "회원가입 성공", Toast.LENGTH_SHORT).show()
+                    // Toast.makeText(this, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, VerificationActivity::class.java)
+                    intent.putStringArrayListExtra("departments", ArrayList(selectedMajors))
+                    startActivity(intent)
                     finish()
-                } else {
+                }else {
                     Toast.makeText(this, "회원가입 실패", Toast.LENGTH_SHORT).show()
                 }
             }

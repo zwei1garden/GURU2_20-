@@ -79,7 +79,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="회원가입"
+            android:text="슈니 인증하기"
             app:icon="@android:drawable/divider_horizontal_bright"
             app:iconTint="#00000000"
             app:rippleColor="#FFFFFF" />

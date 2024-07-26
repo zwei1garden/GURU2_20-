@@ -22,6 +22,10 @@
             android:exported="true" />
 
         <activity
+            android:name=".VerificationActivity"
+            android:exported="true" />
+
+        <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
