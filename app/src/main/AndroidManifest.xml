@@ -34,6 +34,10 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".MypageActivity"
+            android:exported="true" />
+
     </application>
 
 </manifest>

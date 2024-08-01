@@ -38,10 +38,15 @@ class LoginActivity : AppCompatActivity() {
             } else {
                 val success = dbHelper.checkUser(username, password)
                 if (success) {
-                    Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
-                    finish()
+                    val userId = dbHelper.getUserId(username)
+                    if (userId != -1) {
+                        val intent = Intent(this, MainActivity::class.java)
+                        intent.putExtra("USER_ID", userId)
+                        startActivity(intent)
+                        finish()  // End the LoginActivity
+                    } else {
+                        Toast.makeText(this, "사용자 정보를 찾을 수 없습니다.", Toast.LENGTH_SHORT).show()
+                    }
                 } else {
                     loginAttempts++
                     if (loginAttempts >= 5) {
@@ -52,6 +57,7 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
         }
+
 
         registerTextView.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
