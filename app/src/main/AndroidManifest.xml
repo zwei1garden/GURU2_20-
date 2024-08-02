@@ -15,7 +15,6 @@
 
         <activity
             android:name=".MainActivity"
-
             android:exported="true" />
 
         <activity
@@ -27,10 +26,7 @@
             android:exported="true" />
 
         <activity
-            android:name=".BoardActivity"
-
             android:name=".LoginActivity"
-
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,17 +39,17 @@
             android:exported="true" />
 
         <activity
-            android:name=".LoginActivity"
-            android:exported="true" />
-
-        <activity
             android:name=".TimerActivity"
             android:exported="true"/>
 
         <activity
-            android:name=".MypageActivity"
+            android:name=".MyPageActivity"
             android:exported="true" />
 
+        <!-- 추가된 부분: BoardActivity -->
+        <activity
+            android:name=".BoardActivity"
+            android:exported="true" />
 
     </application>
 

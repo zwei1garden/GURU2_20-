@@ -42,7 +42,7 @@ class VerificationActivity : AppCompatActivity() {
         // 학과별 정답
         correctAnswers = mapOf(
             "소프트웨어융합학과" to "백종호 교수님",
-            "디지털미디어학과" to "Photoshop",
+            "디지털미디어학과" to "갓현덕 교수님",
             "정보보호학과" to "박후린 교수님",
             "데이터사이언스학과" to "isfp"
         )

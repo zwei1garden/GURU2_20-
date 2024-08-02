@@ -1,44 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
-    <!-- 강의 목록 -->
-    <TextView
-        android:id="@+id/lectures_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="강의 선택"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="@color/orange"
-        android:layout_marginBottom="16dp" />
 
-    <!-- 강의 체크박스 목록을 담을 LinearLayout -->
     <LinearLayout
-        android:id="@+id/lectures_checkboxes_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="8dp" />
-
-    <!-- 저장 버튼 -->
-    <Button
-        android:id="@+id/buttonSaveLectures"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="저장"
-        android:textColor="#FFFFFF"
-        android:background="#DD5C1F"
-        android:layout_marginTop="16dp" />
+        android:layout_height="wrap_content">
 
-    <!-- 강의 체크박스 목록을 동적으로 추가할 부분 -->
-    <CheckBox
-        android:id="@+id/sample_checkbox"
-        style="@style/CustomCheckBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sample Lecture" />
-</LinearLayout>
+        <TextView
+            android:id="@+id/lectures_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="강의 선택"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/orange"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:id="@+id/lectures_checkboxes_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/buttonSaveLectures"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="저장"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/buttonGoToMainPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="메인페이지로 돌아가기"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>

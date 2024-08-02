@@ -104,8 +104,24 @@ class TimerActivity : AppCompatActivity() {
         }, delay)
     }
 
+    private fun saveElapsedTimeForToday() {
+        val sharedPreferences = getSharedPreferences("TimerPreferences", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+
+        // 현재 날짜를 가져옴
+        val calendar = Calendar.getInstance()
+        val dateFormat = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.getDefault())
+        val dateString = dateFormat.format(calendar.time)
+
+        // 시간을 초 단위로 저장
+        editor.putLong(dateString, elapsedTime)
+        editor.apply()
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         handler.removeCallbacksAndMessages(null)
+        saveElapsedTimeForToday() // Activity가 종료될 때 시간 저장
     }
+
 }

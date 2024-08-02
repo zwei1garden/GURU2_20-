@@ -1,5 +1,6 @@
 package com.guru.guruapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -11,7 +12,7 @@ class PostActivity : AppCompatActivity() {
     private lateinit var authorEditText: EditText
     private lateinit var contentEditText: EditText
     private lateinit var postButton: Button
-    private lateinit var dbHelper: DatabaseHelper
+    private lateinit var dbHelper: DBHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +25,7 @@ class PostActivity : AppCompatActivity() {
         postButton = findViewById(R.id.button_post)
 
         // DatabaseHelper 초기화
-        dbHelper = DatabaseHelper(this)
+        dbHelper = DBHelper(this)
 
         // Post 버튼 클릭 리스너 설정
         postButton.setOnClickListener {
@@ -46,12 +47,18 @@ class PostActivity : AppCompatActivity() {
                 // 사용자에게 알림
                 Toast.makeText(this, "게시글이 등록되었습니다.", Toast.LENGTH_SHORT).show()
 
-                // 액티비티 종료 및 이전 화면으로 돌아가기
+                // 데이터와 함께 BoardActivity로 전환
+                val intent = Intent(this, BoardActivity::class.java)
+                intent.putExtra("EXTRA_TITLE", title)
+                intent.putExtra("EXTRA_AUTHOR", author)
+                intent.putExtra("EXTRA_CONTENT", content)
+                startActivity(intent)
+
+                // 액티비티 종료
                 finish()
             }
         }
     }
-
 
     // 게시글을 저장하는 메서드
     private fun savePost(post: Post) {
