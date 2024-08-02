@@ -1,0 +1,5 @@
+<resources>
+    <style name="CustomCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:textColor">#FFFFFF</item> <!-- 또는 @color/white -->
+    </style>
+</resources>
